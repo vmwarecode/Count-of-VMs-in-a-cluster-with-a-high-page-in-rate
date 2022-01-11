@@ -1,0 +1,12 @@
+{"8f283b20-d821-4eae-8c7f-83248788d1ce": {
+   "resourceKinds": [{
+      "resourceKindKey": "ClusterComputeResource",
+      "adapterKindKey": "VMWARE"
+   }],
+   "modificationTime": 1641934494312,
+   "name": "VMs with high page in rate",
+   "formula": "count(${adaptertype=VMWARE,objecttype=VirtualMachine, attribute=guest|page.inRate_latest, depth=5, where=($value>1250)})",
+   "description": "Count of VM's in cluster with Page in Rate over 1250/sec",
+   "unitId": "",
+   "modifiedBy": "fb83b06a-81b4-4c5f-9819-b498367c9fac"
+}}
